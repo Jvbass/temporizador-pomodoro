@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+.nav-class {
+    height: 30px;
+    background-color: #46451B;
+}
+
+body {
+    background-color: #ccc;
+    transition: background-color 0.5s ease-in-out;
+}
+
+  .active-25 {
+    background-color: tomato;
+    transition: background-color 0.5s ease-in-out;
+  }
+  
+  .active-5 {
+    background-color: rgba(35, 56, 126, 0.719);
+    transition: background-color 0.5s ease-in-out;
+  }
+
+.contador {
+    font-size: 6rem;
+}
+
+/* select  */
+.select-sound {
+    margin-top:2rem ;
+    width: 250px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: rgba(32, 24, 23, 0.808);
+    border: none;
+}
+
+/* slideshow  */
+.slideshow-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+    height: auto;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    border-radius: 2px;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .slide-active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    margin: 50px;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+
+
+  @media screen and (max-width:990px){
+
+    .nav-class{
+        height: 55px;
+    }
+  }

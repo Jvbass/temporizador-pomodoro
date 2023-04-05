@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>pomodoro page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+  <body>
+
+<!-- navbar  -->
+<nav class="nav-class navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" style="color: #fff;" href="#">Pomodoro Page</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup" >
+        <div class="navbar-nav justify-content-end">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#">Ajustes</a>
+          <a class="nav-link ">Sugerencias</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+<!-- fin navbar -->
+
+<!-- contador pomodoro  -->
+<div class="container d-flex flex-column align-items-center mt-5 p-5">
+    <h3 class="contador"><span id="minutes">25</span>:<span id="seconds">00</span></h3>
+    <div class="buttons">    
+        <button class="btn btn-danger mt-2" id="start-btn">Iniciar</button>
+        <button class="btn btn-danger mt-2" id="stop-btn">Pausar</button>
+        <button class="btn btn-danger mt-2" id="reset-btn">Reset</button>
+    </div>
+    <audio id="alarm-sound">
+        <source src="./assets/boxingbell.mp3" type="audio/mpeg">
+        <source src="./assets/creepybell.mp3" type="audio/mpeg">
+        <source src="./assets/purgealarm.mp3" type="audio/mpeg">
+        <source src="./assets/duck.mp3" type="audio/mpeg">
+        <source src="./assets/nevergiveup.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <select class="select-sound" onchange="document.querySelector('audio').src = this.value;">
+        <option value="./assets/boxingbell.mp3">Campana UFC</option>
+        <option value="./assets/creepybell.mp3">Creepy</option>
+        <option value="./assets/purgealarm.mp3">Purga</option>
+        <option value="./assets/duck.mp3">Pato</option>
+        <option value="./assets/nevergiveup.mp3">Rick Astley</option>
+        
+      </select>
+
+</div>
+<!-- fin contador pomodoro  -->
+
+<!-- lista -->
+<div class="container d-flex justify-content-center">
+    <h3>Lista de Tareas</h3>
+</div>
+<!-- fin lista  -->
+<div class="container">
+    <hr style="color:rgba(163, 76, 76, 0.87);">
+</div>
+
+<!-- descripcion -->
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <h4>¿Qué es la Técnica Pomodoro?</h4>
+    <p>La técnica Pomodoro es un método de gestión del tiempo que se utiliza para mejorar la productividad y reducir la procrastinación. Fue desarrollada por Francesco Cirillo a finales de la década de 1980 y se llama así porque el temporizador de cocina que utilizó para implementar esta técnica tenía la forma de un tomate (pomodoro en italiano).</p>
+    </div>
+    <div class="mySlides fade">
+        <h4>¿Cómo se usa?</h4>
+    <p>La técnica Pomodoro se basa en la idea de trabajar en bloques de tiempo ininterrumpidos de 25 minutos, seguidos de un breve descanso de 5 minutos. Después de cuatro bloques de trabajo, se toma un descanso más largo de 15-30 minutos.</p>
+    <p>Durante los bloques de trabajo de 25 minutos, se enfoca en una tarea específica y se evita cualquier distracción o interrupción. Después del bloque de trabajo, se toma un breve descanso para recargar energía antes de comenzar el siguiente bloque.</p>
+    </div>
+    <div class="mySlides fade">
+       <h4>¿Cuales son los objetivos?</h4>
+    <p>La técnica Pomodoro se utiliza para ayudar a las personas a enfocarse en una tarea y aumentar su productividad. Al limitar el tiempo dedicado a una tarea y tomar descansos regulares, la técnica puede ayudar a evitar la fatiga y el agotamiento, lo que puede mejorar el rendimiento y la calidad del trabajo.</p>
+    </div>
+    <div class="mySlides fade">
+        <h4>Las Reglas</h4>
+    <ul>
+        <li>Antes de comenzar, planifica tus tareas: Haz una lista de tareas y organízalas por prioridad.</li>
+        <li>Trabaja en una tarea a la vez: Enfócate en una tarea sin distracciones.</li>
+        <li>No interrumpas el bloque de trabajo: Evita interrupciones innecesarias.</li>
+        <li>Toma un descanso breve después de cada bloque de trabajo: Descansa por 5 minutos.</li>
+        <li>Toma un descanso más largo después de cuatro bloques de trabajo: Descansa por 15-30 minutos.</li>
+        <li>Evita la multitarea: Enfócate en una tarea a la vez.</li>
+        <li>Ajusta la duración de los bloques según sea necesario: Adapta la técnica a tu estilo de trabajo.</li>
+        <li>Usa un temporizador para controlar el tiempo: Mantén el enfoque y evita distracciones.</li>
+    </ul>
+    </div>
+
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(4)"></span> 
+    </div>
+<!-- fin descripcion  -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <script src="./js/slide.js"></script>
+    <script src="./js/pomodoro.js"></script>
+  </body>
+</html>
